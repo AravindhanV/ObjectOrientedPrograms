@@ -11,6 +11,10 @@ public class Inventory {
 		this.pricePerKG=pricePerKG;
 	}
 	
+	public Double calculateValue() {
+		return weight * pricePerKG;
+	}
+	
 	public String getName() {
 		return name;
 	}
