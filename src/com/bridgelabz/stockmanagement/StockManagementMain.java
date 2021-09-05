@@ -17,5 +17,7 @@ public class StockManagementMain {
 			Stock stock = new Stock(stockName,noOfShares,sharePrice);
 			stockPortfolio.addStock(stock);
 		}
+		
+		stockPortfolio.calculateStockValues();
 	}
 }
