@@ -22,6 +22,6 @@ public class StockPortfolio {
 			System.out.println("Value of "+stock.getShareName()+ " : "+stockValue);
 			total += stockValue;
 		}
-		System.out.println("Total Valye of all stocks : "+ total);
+		System.out.println("Total Value of all stocks : "+ total);
 	}
 }
