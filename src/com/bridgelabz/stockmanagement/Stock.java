@@ -28,4 +28,8 @@ public class Stock {
 	public void setShareName(String shareName) {
 		this.shareName = shareName;
 	}
+	
+	public int calculateValue() {
+		return sharePrice * noOfShares;
+	}
 }
