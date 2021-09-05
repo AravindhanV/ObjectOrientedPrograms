@@ -4,6 +4,12 @@ public class Stock {
 	private int noOfShares;
 	private int sharePrice;
 	private String shareName;
+	
+	public Stock(String shareName, int noOfShares, int sharePrice) {
+		this.shareName = shareName;
+		this.noOfShares = noOfShares;
+		this.sharePrice = sharePrice;
+	}
 
 	public int getNoOfShares() {
 		return noOfShares;
