@@ -3,6 +3,12 @@ package com.bridgelabz.commercialprocessing;
 import java.time.LocalDateTime;
 
 public class CompanyShares {
+	public CompanyShares(String symbol,int noOfShares, LocalDateTime dateTime) {
+		this.symbol = symbol;
+		this.noOfShares = noOfShares;
+		this.dataTime = dateTime;
+	}
+	
 	private String symbol;
 	public String getSymbol() {
 		return symbol;
@@ -19,8 +25,8 @@ public class CompanyShares {
 	public LocalDateTime getDataTime() {
 		return dataTime;
 	}
-	public void setDataTime(LocalDateTime dataTime) {
-		this.dataTime = dataTime;
+	public void setDataTime(LocalDateTime dateTime) {
+		this.dataTime = dateTime;
 	}
 	private int noOfShares;
 	private LocalDateTime dataTime;
