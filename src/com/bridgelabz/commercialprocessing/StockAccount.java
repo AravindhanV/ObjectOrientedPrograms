@@ -3,10 +3,21 @@ package com.bridgelabz.commercialprocessing;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
+import com.bridgelabz.datastructures.Queue;
+import com.bridgelabz.datastructures.Stack;
+
 public class StockAccount {
 	private ArrayList<CompanyShares> companyShares;
+	private Stack<String> buyStack;
+	private Stack<String> sellStack;
+	private Queue<String> buyQueue;
+	private Queue<String> sellQueue;
 	public StockAccount() {
 		companyShares = new ArrayList<>();		
+		buyStack = new Stack<>();
+		sellStack = new Stack();
+		buyQueue = new Queue<>();
+		sellQueue = new Queue<>();
 	}
 	
 	public double valueOf() {
@@ -28,6 +39,8 @@ public class StockAccount {
 		if(!isFound) {
 			companyShares.add(new CompanyShares(symbol, amount, LocalDateTime.now()));
 		}
+		buyStack.push(symbol);
+		buyQueue.enQueue(LocalDateTime.now().toString());
 	}
 	
 	public void sell(int amount, String symbol) {
@@ -49,7 +62,8 @@ public class StockAccount {
 		if(!isFound) {
 			System.out.println("Symbol doesn't exist");
 		}
-		
+		sellStack.push(symbol);
+		sellQueue.enQueue(LocalDateTime.now().toString());
 	}
 	
 	public void save() {
