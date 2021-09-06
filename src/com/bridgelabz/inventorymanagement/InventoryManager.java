@@ -1,13 +1,27 @@
 package com.bridgelabz.inventorymanagement;
 
+import java.util.Scanner;
+
+import com.bridgelabz.datastructures.LinkedList;
+import com.bridgelabz.datastructures.Node;
+
 public class InventoryManager {
+	public static Scanner scanner = new Scanner(System.in);
+	public static LinkedList<Inventory> inventoryList;
+	public static InventoryFactory inventoryFactory = new InventoryFactory();
+	
 	public static void main(String[] args) {
-		Inventory rice=new Inventory("Rice",40.5, 38.8);
-		Inventory wheat=new Inventory("Wheat",23.6, 17.5);
-		Inventory pulses=new Inventory("Pulses",10.4, 30.5);
+		inventoryList = new LinkedList();
+		System.out.println("Enter number of inventories");
+		int noOfInventories = Integer.parseInt(scanner.nextLine());
 		
-		System.out.println("Value of "+rice.getName()+" : "+rice.calculateValue());
-		System.out.println("Value of "+wheat.getName()+" : "+wheat.calculateValue());
-		System.out.println("Value of "+pulses.getName()+" : "+pulses.calculateValue());
+	}
+	
+	public static void createInventories(int noOfInventories) {
+		for(int count=0;count<noOfInventories;count++) {
+			System.out.println("Enter name of inventory");
+			Inventory inventory = inventoryFactory.createInventory(scanner.nextLine());
+			inventoryList.append(new Node(inventory));
+		}
 	}
 }

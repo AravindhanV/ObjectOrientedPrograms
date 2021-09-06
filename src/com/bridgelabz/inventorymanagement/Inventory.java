@@ -1,6 +1,6 @@
 package com.bridgelabz.inventorymanagement;
 
-public class Inventory {
+public class Inventory implements Comparable<Inventory>{
 	private String name;
 	private Double weight;
 	private Double pricePerKG;
@@ -37,5 +37,11 @@ public class Inventory {
 
 	public void setPricePerKG(Double pricePerKG) {
 		this.pricePerKG = pricePerKG;
+	}
+
+	@Override
+	public int compareTo(Inventory arg0) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
