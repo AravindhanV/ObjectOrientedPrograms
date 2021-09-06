@@ -2,7 +2,7 @@ package com.bridgelabz.commercialprocessing;
 
 import java.time.LocalDateTime;
 
-public class CompanyShares {
+public class CompanyShares implements Comparable<CompanyShares> {
 	public CompanyShares(String symbol,int noOfShares, LocalDateTime dateTime) {
 		this.symbol = symbol;
 		this.noOfShares = noOfShares;
@@ -30,4 +30,13 @@ public class CompanyShares {
 	}
 	private int noOfShares;
 	private LocalDateTime dataTime;
+	@Override
+	public int compareTo(CompanyShares arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	public boolean equals(CompanyShares share) {
+		return this.symbol.equalsIgnoreCase(share.getSymbol());
+	}
 }
