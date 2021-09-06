@@ -1,6 +1,6 @@
 package com.bridgelabz.inventorymanagement;
 
-public class InventoryMain {
+public class InventoryManager {
 	public static void main(String[] args) {
 		Inventory rice=new Inventory("Rice",40.5, 38.8);
 		Inventory wheat=new Inventory("Wheat",23.6, 17.5);
