@@ -65,6 +65,6 @@ public class StockAccount {
 	}
 
 	public void printReport() {
-
+		companyShares.printList();
 	}
 }

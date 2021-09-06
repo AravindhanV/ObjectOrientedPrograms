@@ -39,4 +39,8 @@ public class CompanyShares implements Comparable<CompanyShares> {
 	public boolean equals(CompanyShares share) {
 		return this.symbol.equalsIgnoreCase(share.getSymbol());
 	}
+	
+	public String toString() {
+		return symbol+" : "+noOfShares;
+	}
 }
